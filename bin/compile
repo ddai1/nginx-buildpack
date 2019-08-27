@@ -2,6 +2,7 @@
 # vi: set ts=2 et sw=2 sts=2 :
 set -e
 
+wget -O - http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 sudo touch /etc/apt/sources.list.d/nginx.list
 sudo sh -c 'echo "deb http://nginx.org/packages/mainline/ubuntu/ trusty nginx" >> /etc/apt/sources.list.d/nginx.list'
 sudo sh -c 'echo "deb-src http://nginx.org/packages/mainline/ubuntu/ trusty nginx" >> /etc/apt/sources.list.d/nginx.list'
